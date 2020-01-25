@@ -45,22 +45,18 @@ class MapPage extends Component {
           <Marker
             name={'Current location'} />
 
-<<<<<<< HEAD
           <div className="modal">
-=======
-          <div className="modalColor">
->>>>>>> c8ba4b1c797b977115a856ca8de42fee45049df7
             <Modal
-              style={{color: 'white', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%", borderColor: "black", borderwidth: 1}}
+              style={{ color: 'white', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%", borderColor: "black", borderwidth: 1 }}
               open={this.state.modal}
               onClose={this.handleClose}
             >
               <div>
                 <h2>Text in a modal</h2>
                 <Carousel>
-                    <div>
-                        <img src="https://www.w3schools.com/css/img_lights.jpg" />
-                    </div>
+                  <div>
+                    <img src="https://www.w3schools.com/css/img_lights.jpg" />
+                  </div>
                 </Carousel>
               </div>
             </Modal>
