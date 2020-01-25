@@ -15,3 +15,19 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.homeText {
+    padding-top: 6%;
+    text-align: center;
+}
+
+.homeButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.spacing {
+    margin-bottom: 0em;
+}
