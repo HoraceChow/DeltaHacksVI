@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class StoreSetInfo extends Component {
     constructor() {
@@ -58,6 +59,10 @@ class StoreSetInfo extends Component {
                         onChange={this.handleStoreHoursChange}
                     />
                 </div>
+
+                <div>
+                    <Button variant="contained">Submit</Button>
+                </div >
             </>
         );
     }
