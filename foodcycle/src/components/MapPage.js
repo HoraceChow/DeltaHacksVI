@@ -2,8 +2,11 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import Modal from '@material-ui/core/Modal';
 import '../styles/Map.css';
+<<<<<<< HEAD
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+=======
+>>>>>>> c8ba4b1c797b977115a856ca8de42fee45049df7
 
 class MapPage extends Component {
   constructor() {
@@ -42,7 +45,11 @@ class MapPage extends Component {
           <Marker
             name={'Current location'} />
 
+<<<<<<< HEAD
           <div className="modal">
+=======
+          <div className="modalColor">
+>>>>>>> c8ba4b1c797b977115a856ca8de42fee45049df7
             <Modal
               style={{color: 'white', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%", borderColor: "black", borderwidth: 1}}
               open={this.state.modal}
