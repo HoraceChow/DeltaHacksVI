@@ -41,7 +41,7 @@ class MapPage extends Component {
 
           <div>
             <Modal
-              style={{ background: "white", width: "50%", height: "50%", borderRadius: 20, verticalAlign: "middle" }}
+              style={{ background: "white", width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%" }}
               open={this.state.modal}
               onClose={this.handleClose}
             >
