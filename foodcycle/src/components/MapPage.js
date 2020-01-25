@@ -2,11 +2,8 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import Modal from '@material-ui/core/Modal';
 import '../styles/Map.css';
-<<<<<<< HEAD
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-=======
->>>>>>> c8ba4b1c797b977115a856ca8de42fee45049df7
 
 class MapPage extends Component {
   constructor() {
@@ -55,7 +52,7 @@ class MapPage extends Component {
                 <h2>Text in a modal</h2>
                 <Carousel>
                   <div>
-                    <img src="https://www.w3schools.com/css/img_lights.jpg" />
+                    <img src="https://www.thestar.com/content/dam/thestar/life/food_wine/2010/03/26/we_rate_the_best_supermarket_rotisserie_chicken/chicken.jpeg" width="5em" height="5em"/>
                   </div>
                 </Carousel>
               </div>
