@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MapPage />
+        <StoreSetInfo />
       </div>
     );
   }
