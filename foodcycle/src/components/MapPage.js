@@ -52,7 +52,7 @@ class MapPage extends Component {
                 <h2>Text in a modal</h2>
                 <Carousel>
                   <div>
-                    <img src="https://www.w3schools.com/css/img_lights.jpg" />
+                    <img src="https://www.thestar.com/content/dam/thestar/life/food_wine/2010/03/26/we_rate_the_best_supermarket_rotisserie_chicken/chicken.jpeg" width="5em" height="5em"/>
                   </div>
                 </Carousel>
               </div>
