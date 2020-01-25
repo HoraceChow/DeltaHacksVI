@@ -4,6 +4,8 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './styles/index.css';
 import App from './App';
 import Home from './components/Home';
+import StoreSetInfo from './components/StoreSetInfo';
+import MapPage from './components/MapPage';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -11,6 +13,8 @@ const routing = (
         <div>
             <Route exact path="/" component={App} />
             <Route path="/home" component={Home} />
+            <Route path="/map" component={MapPage} />
+            <Route path="/store" component={StoreSetInfo} />
         </div>
     </Router>
 )
