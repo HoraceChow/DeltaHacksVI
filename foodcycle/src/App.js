@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './styles/App.css';
-import Home from "./components/Home.js"
+import Home from './components/Home'
+import MapPage from "./components/MapPage"
 import StoreSetInfo from "./components/StoreSetInfo"
 
 class App extends Component {
@@ -14,8 +14,9 @@ class App extends Component {
 
   render() {
     return (
-      // Open home screen
-      <StoreSetInfo />
+      <div>
+        <Home />
+      </div>
     );
   }
 }
