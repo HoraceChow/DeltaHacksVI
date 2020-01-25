@@ -1,6 +1,7 @@
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import Modal from '@material-ui/core/Modal';
+import '../styles/Map.css';
 
 class MapPage extends Component {
   constructor() {
@@ -39,7 +40,7 @@ class MapPage extends Component {
           <Marker
             name={'Current location'} />
 
-          <div>
+          <div className="modalColor">
             <Modal
               style={{ background: "white", width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%" }}
               open={this.state.modal}
