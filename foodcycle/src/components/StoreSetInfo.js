@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import '../styles/StoreSetInfo.css';
+import '../food_background.png';
 
 class StoreSetInfo extends Component {
     constructor() {
@@ -32,38 +34,49 @@ class StoreSetInfo extends Component {
 
     render() {
         return (
-            <>
-                <div className="storeSetInfo">
-                    <TextField
-                        required
-                        id="filled-required"
-                        label="Store Name"
-                        onChange={this.handleStoreNameChange}
-                    />
+            <div>
+                <div className = "upperbody"> 
+                    <div className = "home">
+                        <Button className = "homeButton" variant="contained">Home</Button>
+                    </div>
+                    <div className = "map">
+                        <Button className = "mapButton" variant="contained">Map</Button>
+                    </div>  
                 </div>
+                <div className = "body">
 
-                <div>
-                    <TextField
-                        required
-                        id="filled-required"
-                        label="Store Location"
-                        onChange={this.handleStoreLocationChange}
-                    />
+                    <div className="storeSetInfo">
+                        <TextField
+                            required
+                            id="filled-required"
+                            label="Store Name"
+                            onChange={this.handleStoreNameChange}
+                        />
+                    </div>
+
+                    <div className = "storeLocation">
+                        <TextField
+                            required
+                            id="filled-required"
+                            label="Store Location"
+                            onChange={this.handleStoreLocationChange}
+                        />
+                    </div>
+
+                    <div className = "storeHours">
+                        <TextField
+                            required
+                            id="filled-required"
+                            label="Store Hours"
+                            onChange={this.handleStoreHoursChange}
+                        />
+                    </div>
+
+                    <div>
+                        <Button className = "button" variant="contained">Submit</Button>
+                    </div>
                 </div>
-
-                <div>
-                    <TextField
-                        required
-                        id="filled-required"
-                        label="Store Hours"
-                        onChange={this.handleStoreHoursChange}
-                    />
-                </div>
-
-                <div>
-                    <Button variant="contained">Submit</Button>
-                </div >
-            </>
+            </div>
         );
     }
 }
