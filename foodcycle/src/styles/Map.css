@@ -1,0 +1,4 @@
+.modal {
+    background-color: 'white'; /* Fallback color */
+    z-index: 1; /* Overlay effect: positioned over other containers */
+}
