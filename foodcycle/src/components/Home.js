@@ -12,9 +12,11 @@ class Home extends Component {
 
   render() {
     return (
-     <div class="Home">
-       <p> Hello Worl</p>
-     </div>
+    <div class="Home">
+      <div className="Text">
+        <h1>FoodCycle</h1>
+      </div>
+    </div>
     );
   }
 }

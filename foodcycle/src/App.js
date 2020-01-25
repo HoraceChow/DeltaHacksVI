@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './styles/App.css';
-import Home from "./components/Home.js"
+import Home from './components/Home'
 
 class App extends Component {
   constructor() {
@@ -13,8 +12,9 @@ class App extends Component {
 
   render() {
     return (
-      // Open home screen
-      <Home/>
+      <div>
+        <Home />
+      </div>
     );
   }
 }
