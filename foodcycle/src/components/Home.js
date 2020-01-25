@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BackgroundImg from '../assets/background1.png';
 import '../styles/Home.css';
 
 class Home extends Component {
@@ -13,8 +12,12 @@ class Home extends Component {
   render() {
     return (
     <div class="Home">
-      <div className="Text">
-        <h1>FoodCycle</h1>
+      <div style={{display: 'flex',
+        justifyContent: 'center',
+      }}>
+        <div>
+          <h1>FoodCycle</h1>
+        </div>
       </div>
     </div>
     );
