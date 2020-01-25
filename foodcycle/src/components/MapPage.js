@@ -2,6 +2,8 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import Modal from '@material-ui/core/Modal';
 import '../styles/Map.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 class MapPage extends Component {
   constructor() {
@@ -40,17 +42,19 @@ class MapPage extends Component {
           <Marker
             name={'Current location'} />
 
-          <div className="modalColor">
+          <div className="modal">
             <Modal
-              style={{ background: "white", width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%" }}
+              style={{ color: 'white', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%", borderColor: "black", borderwidth: 1 }}
               open={this.state.modal}
               onClose={this.handleClose}
             >
               <div>
                 <h2>Text in a modal</h2>
-                <p>
-                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-              </p>
+                <Carousel>
+                  <div>
+                    <img src="https://www.thestar.com/content/dam/thestar/life/food_wine/2010/03/26/we_rate_the_best_supermarket_rotisserie_chicken/chicken.jpeg" width="5em" height="5em"/>
+                  </div>
+                </Carousel>
               </div>
             </Modal>
           </div>
