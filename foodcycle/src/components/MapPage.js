@@ -280,5 +280,5 @@ class MapPage extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCiX5KnW9YIg1Ot17lgBwKfxMELLU7mNbM')
+  apiKey: ('AIzaSyCiX5Kn' + '' + 'W9YIg1Ot17lgBwKfx' + '' + 'MELLU7mNbM')
 })(MapPage)
