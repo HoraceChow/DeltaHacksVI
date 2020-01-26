@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import ImageUploader from 'react-images-upload';
+import { DropzoneArea } from 'material-ui-dropzone'
 import '../styles/StoreSetInfo.css';
 import '../food_background.png';
 
@@ -35,12 +35,11 @@ class StoreSetInfo extends Component {
         });
     }
 
-    onDrop = (picture) => {
+    handleChange(files) {
         this.setState({
-            pictures: picture
+            pictures: files
         });
     }
-
 
     render() {
         return (
@@ -82,13 +81,8 @@ class StoreSetInfo extends Component {
                         />
                     </div>
 
-                    <ImageUploader
-                        className = "imageuploader"
-                        withIcon={true}
-                        buttonText='Choose images'
-                        onChange={this.onDrop}
-                        imgExtension={['.jpg', '.gif', '.png', '.gif']}
-                        maxFileSize={5242880}
+                    <DropzoneArea
+                        onChange={this.handleChange.bind(this)}
                     />
 
                     <div>
