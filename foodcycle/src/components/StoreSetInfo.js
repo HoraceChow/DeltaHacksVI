@@ -125,7 +125,7 @@ class StoreSetInfo extends Component {
                         />
 
                         <div>
-                            <Button className="button" variant="contained" onClick={this.submitTrigger}>Submit</Button>
+                            <Button className="button" variant="contained" onClick={this.submitTrigger} component={Link} to="/home">Submit</Button>
                         </div>
 
                     </div>
