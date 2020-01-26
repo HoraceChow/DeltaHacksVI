@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import ImageUploader from 'react-images-upload';
 import '../styles/StoreSetInfo.css';
 import '../food_background.png';
 
@@ -10,7 +11,8 @@ class StoreSetInfo extends Component {
         this.state = {
             storeName: "",
             storeLocation: "",
-            storeHours: ""
+            storeHours: "",
+            pictures: []
         }
     }
 
@@ -32,18 +34,25 @@ class StoreSetInfo extends Component {
         });
     }
 
+    onDrop(picture) {
+        this.setState({
+            pictures: this.state.pictures.concat(picture),
+        });
+    }
+
+
     render() {
         return (
             <div>
-                <div className = "upperbody"> 
-                    <div className = "home">
-                        <Button className = "homeButton" variant="contained">Home</Button>
+                <div className="upperbody">
+                    <div className="home">
+                        <Button className="homeButton" variant="contained">Home</Button>
                     </div>
-                    <div className = "map">
-                        <Button className = "mapButton" variant="contained">Map</Button>
-                    </div>  
+                    <div className="map">
+                        <Button className="mapButton" variant="contained">Map</Button>
+                    </div>
                 </div>
-                <div className = "body">
+                <div className="body">
 
                     <div className="storeSetInfo">
                         <TextField
@@ -54,7 +63,7 @@ class StoreSetInfo extends Component {
                         />
                     </div>
 
-                    <div className = "storeLocation">
+                    <div className="storeLocation">
                         <TextField
                             required
                             id="filled-required"
@@ -63,7 +72,7 @@ class StoreSetInfo extends Component {
                         />
                     </div>
 
-                    <div className = "storeHours">
+                    <div className="storeHours">
                         <TextField
                             required
                             id="filled-required"
@@ -72,9 +81,18 @@ class StoreSetInfo extends Component {
                         />
                     </div>
 
+                    <ImageUploader
+                        withIcon={true}
+                        buttonText='Choose images'
+                        onChange={this.onDrop}
+                        imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                        maxFileSize={5242880}
+                    />
+
                     <div>
-                        <Button className = "button" variant="contained">Submit</Button>
+                        <Button className="button" variant="contained">Submit</Button>
                     </div>
+
                 </div>
             </div>
         );
