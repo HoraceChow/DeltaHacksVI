@@ -13,6 +13,8 @@ import Banana from '../assets/banana.jpg';
 import Burger from '../assets/snooty.jpeg';
 import Pizza from '../assets/Boston-Pizza.jpg';
 import Wings from '../assets/wings.jpg';  
+import Cookie from '../assets/cookie.jpg';  
+
 import GreenIcon from '../assets/Green2.png';
 class MapPage extends Component {
   constructor() {
@@ -20,7 +22,9 @@ class MapPage extends Component {
     this.state = {
       modalFortinos: false,
       modalSnooty: false,
-      modalPizza: false
+      modalPizza: false,
+      locationState: true,
+      modalStarbucks: false,
     }
     this.handleOpenFortinos = this.handleOpenFortinos.bind(this);
     this.handleCloseFortinos = this.handleCloseFortinos.bind(this);
@@ -28,6 +32,8 @@ class MapPage extends Component {
     this.handleCloseSnooty = this.handleCloseSnooty.bind(this);
     this.handleOpenPizza = this.handleOpenPizza.bind(this);
     this.handleClosePizza = this.handleClosePizza.bind(this);
+    this.handleOpenStarbucks = this.handleOpenStarbucks.bind(this);
+    this.handleCloseStarbucks = this.handleCloseStarbucks.bind(this);
   }
 
   handleOpenFortinos() {
@@ -65,6 +71,19 @@ class MapPage extends Component {
       modalPizza: false
     });
   }
+
+  handleOpenStarbucks() {
+    this.setState({
+      modalStarbucks: true
+    });
+  }
+
+  handleCloseStarbucks() {
+    this.setState({
+      modalStarbucks: false
+    });
+  }
+
   render() {
     return (
         <div className="backgroundContainer">
@@ -81,8 +100,8 @@ class MapPage extends Component {
             google={this.props.google}
             zoom={15}
             initialCenter={{
-                lat: 43.2609,
-                lng: -79.9192
+                lat: 43.2610,
+                lng: -79.9225
             }}
             style={{width: "70%", height: "70%", marginLeft: "15%", marginTop: "8%"}}
             >
@@ -166,6 +185,29 @@ class MapPage extends Component {
                 </div>
                 </Modal>
             </div>
+
+            <div className="modal">
+                <Modal
+                style={{ color: 'White', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "2%", borderColor: "black", borderwidth: 1 }}
+                open={this.state.modalStarbucks}
+                onClose={this.handleCloseStarbucks}
+                >
+                <div>
+                    <h2>Starbucks</h2>
+                    <h4>Hours of Operation:</h4>
+                    <p>Saturday	8a.m.–7p.m.</p>
+                    <p>Sunday	7a.m.–6p.m.</p>
+                    <p>Monday-Friday	7a.m.–8p.m.</p>
+                    <h4>Items available:</h4>
+                    <Carousel infiniteLoop={true} showThumbs={false}>
+                    <div>
+                        <img src={Cookie} style={{width: '50%', height: '50%'}}/>
+                    </div>
+                    </Carousel>
+                </div>
+                </Modal>
+            </div>
+
             <Marker
                 onClick={this.handleOpenFortinos}
                 title={'Fortinos (Main St.)'}
@@ -177,27 +219,43 @@ class MapPage extends Component {
                 }}
             />
 
-                <Marker
-                    onClick={this.handleOpenSnooty}
-                    title={'Snooty Fox'}
-                    name={'Snooty Fox'}
-                    position={{ lat: 43.2618, lng: -79.9052 }}
-                    onMouseover={this.onMouseoverMarker}
-                    icon={{
-                        url: GreenIcon
-                    }}
+            <Marker
+                onClick={this.handleOpenSnooty}
+                title={'Snooty Fox'}
+                name={'Snooty Fox'}
+                position={{ lat: 43.2618, lng: -79.9052 }}
+                onMouseover={this.onMouseoverMarker}
+                icon={{
+                    url: GreenIcon
+                }}
             />
 
+            <Marker
+                onClick={this.handleOpenPizza}
+                title={'Boston Pizza'}
+                name={'Boston Pizza'}
+                position={{ lat: 43.2572, lng: -79.9277 }}
+                onMouseover={this.onMouseoverMarker}
+                icon={{
+                    url: GreenIcon
+                }}
+            />
+
+            {this.state.locationState ?
                 <Marker
-                    onClick={this.handleOpenPizza}
-                    title={'Boston Pizza'}
-                    name={'Boston Pizza'}
-                    position={{ lat: 43.2572, lng: -79.9277 }}
+                    onClick={this.handleOpenStarbucks}
+                    title={'Starbucks'}
+                    name={'Starbucks'}
+                    position={{ lat: 43.2576, lng: -79.9194 }}
                     onMouseover={this.onMouseoverMarker}
                     icon={{
                         url: GreenIcon
                     }}
-            />
+                />
+            : 
+            <>
+            </>
+            }
 
             <InfoWindow onClose={this.onInfoWindowClose}>
                 {/* <div>
