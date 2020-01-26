@@ -4,12 +4,15 @@ import Modal from '@material-ui/core/Modal';
 import '../styles/Map.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 import Chicken from '../assets/chicken.jpeg';
 import Muffin from '../assets/muffin.jpg';
 import Banana from '../assets/banana.jpg';
 import Burger from '../assets/snooty.jpeg';
 import Pizza from '../assets/Boston-Pizza.jpg';
-import Wings from '../assets/wings.jpg';
+import Wings from '../assets/wings.jpg';  
 import GreenIcon from '../assets/Green2.png';
 class MapPage extends Component {
   constructor() {
@@ -66,7 +69,14 @@ class MapPage extends Component {
     return (
         <div className="backgroundContainer">
           <div className="mainContainer">
+            <Button style={{marginRight: "80%", width: "5px", borderColor: "#00733b", color: "#00733b", backgroundColor: "#ffffff"}}
+            variant="contained"
+            component={Link}
+            to="/home">
+              Home
+            </Button>
             <h1 style={{textAlign: "center"}}>FoodCycle Network</h1>
+            
             <Map
             google={this.props.google}
             zoom={15}
@@ -74,7 +84,7 @@ class MapPage extends Component {
                 lat: 43.2609,
                 lng: -79.9192
             }}
-            style={{width: "70%", height: "75%", marginLeft: "15%", marginTop: "5%"}}
+            style={{width: "70%", height: "70%", marginLeft: "15%", marginTop: "8%"}}
             >
 
             <Marker

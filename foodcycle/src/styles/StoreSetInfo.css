@@ -15,10 +15,10 @@
     margin: 20px !important;
 }
 
-.mainContainer {
+.storeBackContainer {
     background-image:
-        url(../assets/leftBG.png),
-        url(../assets/rightBG.png);
+    url(../assets/leftBG.png),
+    url(../assets/rightBG.png);
     /* Full height */
     height: 98vh;
     margin: 0;
@@ -31,6 +31,11 @@
         right;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .button:hover {
@@ -52,16 +57,12 @@
     background: #f0efef;
 }
 
-.upperbody{
-    /* background-color: #655c56; */
-    padding: 15px;
-    border-radius: 10px;
-    
-}
-
 .home{
     display: inline;
-    margin: 5px;
+    margin: auto;
+    padding-right: 80%;
+    padding-top: 15px;
+    padding-bottom: 4%;
 }
 
 .homeButton{

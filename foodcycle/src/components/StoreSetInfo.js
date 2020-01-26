@@ -43,52 +43,52 @@ class StoreSetInfo extends Component {
 
     render() {
         return (
-            <div className="mainContainer">
-                <div className="upperbody">
+            <div className="storeBackContainer">
+                <div className="mainContainer">
                     <div className="home">
                         <Button className="homeButton" variant="contained" component={Link} to="/home">Home</Button>
                     </div>
-                </div>
-                <div className="body">
-                    <div>
-                        <p style={{ fontWeight: "bold", fontSize: "20px" }}>Join Our Network</p>
-                        <p style={{ marginTop: "-10px", fontWeight: "bold" }}>Thank you making a change in your local community!</p>
-                    </div>
-                    <div className="storeSetInfo">
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Store Name"
-                            onChange={this.handleStoreNameChange}
+                    <div className="body">
+                        <div>
+                            <p style={{ fontWeight: "bold", fontSize: "20px" }}>Join Our Network</p>
+                            <p style={{ marginTop: "-10px", fontWeight: "bold" }}>Thank you making a change in your local community!</p>
+                        </div>
+                        <div className="storeSetInfo">
+                            <TextField
+                                required
+                                id="filled-required"
+                                label="Store Name"
+                                onChange={this.handleStoreNameChange}
+                            />
+                        </div>
+
+                        <div className="storeLocation">
+                            <TextField
+                                required
+                                id="filled-required"
+                                label="Store Location"
+                                onChange={this.handleStoreLocationChange}
+                            />
+                        </div>
+
+                        <div className="storeHours">
+                            <TextField
+                                required
+                                id="filled-required"
+                                label="Store Hours"
+                                onChange={this.handleStoreHoursChange}
+                            />
+                        </div>
+
+                        <DropzoneArea
+                            onChange={this.handleChange.bind(this)}
                         />
+
+                        <div>
+                            <Button className="button" variant="contained">Submit</Button>
+                        </div>
+
                     </div>
-
-                    <div className="storeLocation">
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Store Location"
-                            onChange={this.handleStoreLocationChange}
-                        />
-                    </div>
-
-                    <div className="storeHours">
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Store Hours"
-                            onChange={this.handleStoreHoursChange}
-                        />
-                    </div>
-
-                    <DropzoneArea
-                        onChange={this.handleChange.bind(this)}
-                    />
-
-                    <div>
-                        <Button className="button" variant="contained">Submit</Button>
-                    </div>
-
                 </div>
             </div>
         );

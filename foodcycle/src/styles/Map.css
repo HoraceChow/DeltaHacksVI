@@ -22,8 +22,6 @@
 }
 
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    padding-top: 25px;
     align-items: center;
 }
