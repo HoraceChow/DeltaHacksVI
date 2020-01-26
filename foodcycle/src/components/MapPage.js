@@ -64,7 +64,8 @@ class MapPage extends Component {
   }
   render() {
     return (
-        <div className="mainContainer">
+        <div className="backgroundContainer">
+          <div className="mainContainer">
             <h1 style={{textAlign: "center"}}>FoodCycle Network</h1>
             <Map
             google={this.props.google}
@@ -73,7 +74,7 @@ class MapPage extends Component {
                 lat: 43.2609,
                 lng: -79.9192
             }}
-            style={{width: "70%", height: "80%", marginLeft: "15%"}}
+            style={{width: "70%", height: "75%", marginLeft: "15%", marginTop: "5%"}}
             >
 
             <Marker
@@ -194,7 +195,8 @@ class MapPage extends Component {
                     </div> */}
             </InfoWindow>
             </Map>
-        </div >
+          </div>
+        </div>
     );
   }
 }

@@ -3,11 +3,12 @@
     z-index: 1; /* Overlay effect: positioned over other containers */
 }
 
-.mainContainer {
+.backgroundContainer {
     background-image:
         url(../assets/leftBG.png),
         url(../assets/rightBG.png);
     /* Full height */
+    height: 98vh;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -18,4 +19,11 @@
         right;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
