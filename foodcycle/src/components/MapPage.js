@@ -69,7 +69,7 @@ class MapPage extends Component {
     return (
         <div className="backgroundContainer">
           <div className="mainContainer">
-            <Button style={{marginRight: "80%", width: "5px", borderColor: "#00733b", color: "#00733b", backgroundColor: "#ffffff"}}
+            <Button style={{marginRight: "80%", width: "5px", borderColor: "#00733b", color: "#00733b", backgroundColor: "#ffffff", zIndex: 1}}
             variant="contained"
             component={Link}
             to="/home">

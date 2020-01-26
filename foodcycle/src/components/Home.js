@@ -16,7 +16,7 @@ class Home extends Component {
     return (
     <div class="Home">
       <div className="homeText">
-        <img src={icon} width='20%'></img>
+        <img src={icon} width='10%'></img>
         <p style={{fontSize: '56px', fontWeight: 'bold', marginTop: '0em', marginBottom: '0.5em'}}>FoodCycle</p>
         <div className="homeButton">
           <Button variant="outlined" style={{color: '#00733b', width: '11em', fontWeight: 'bold', fontSize: '30px', borderColor: '#00733b', borderWidth: '3px', borderRadius: 100}}
