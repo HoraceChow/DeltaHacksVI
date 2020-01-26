@@ -22,11 +22,10 @@
 }
 
 .homeButton {
-    margin-left: 40vw; /* 49em for full screen */
+    margin-left: 49em; /* 49em for full screen */
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 100%;
 }
 
 .spacing {
