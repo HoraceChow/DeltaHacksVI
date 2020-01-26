@@ -6,30 +6,62 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Chicken from '../assets/chicken.jpeg';
 import Muffin from '../assets/muffin.jpg';
-import Yogurt from '../assets/yogurt.jpg';
+import Banana from '../assets/banana.jpg';
+import Burger from '../assets/snooty.jpeg';
+import Pizza from '../assets/Boston-Pizza.jpg';
+import Wings from '../assets/wings.jpg';
 import GreenIcon from '../assets/Green2.png';
 class MapPage extends Component {
   constructor() {
     super();
     this.state = {
-      modal: false
+      modalFortinos: false,
+      modalSnooty: false,
+      modalPizza: false
     }
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.handleOpenFortinos = this.handleOpenFortinos.bind(this);
+    this.handleCloseFortinos = this.handleCloseFortinos.bind(this);
+    this.handleOpenSnooty = this.handleOpenSnooty.bind(this);
+    this.handleCloseSnooty = this.handleCloseSnooty.bind(this);
+    this.handleOpenPizza = this.handleOpenPizza.bind(this);
+    this.handleClosePizza = this.handleClosePizza.bind(this);
   }
 
-  handleOpen() {
+  handleOpenFortinos() {
     this.setState({
-      modal: true
+      modalFortinos: true
     });
   }
 
-  handleClose() {
+  handleCloseFortinos() {
     this.setState({
-      modal: false
+      modalFortinos: false
     });
   }
 
+  handleOpenSnooty() {
+    this.setState({
+      modalSnooty: true
+    });
+  }
+
+  handleCloseSnooty() {
+    this.setState({
+      modalSnooty: false
+    });
+  }
+
+  handleOpenPizza() {
+    this.setState({
+      modalPizza: true
+    });
+  }
+
+  handleClosePizza() {
+    this.setState({
+      modalPizza: false
+    });
+  }
   render() {
     return (
       <div style={{width: "80%"}}>
@@ -50,8 +82,8 @@ class MapPage extends Component {
           <div className="modal">
             <Modal
               style={{ color: 'White', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "2%", borderColor: "black", borderwidth: 1 }}
-              open={this.state.modal}
-              onClose={this.handleClose}
+              open={this.state.modalFortinos}
+              onClose={this.handleCloseFortinos}
             >
               <div>
                 <h2>Fortinos (Main St.)</h2>
@@ -68,15 +100,61 @@ class MapPage extends Component {
                     <img src={Muffin} style={{width: "50%", height: "50%"}}/>
                   </div>
                   <div>
-                    <img src={Yogurt} style={{width: "50%", height: "50%"}}/>
+                    <img src={Banana} style={{width: "50%", height: "50%"}}/>
                   </div>
                 </Carousel>
               </div>
             </Modal>
           </div>
 
+          <div className="modal">
+            <Modal
+              style={{ color: 'White', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "2%", borderColor: "black", borderwidth: 1 }}
+              open={this.state.modalSnooty}
+              onClose={this.handleCloseSnooty}
+            >
+              <div>
+                <h2>Snooty Fox</h2>
+                <h4>Hours of Operation:</h4>
+                <p>Saturday	11a.m.–9p.m.</p>
+                <p>Sunday	12p.m.–9p.m.</p>
+                <p>Monday-Friday	11a.m.–12a.m.</p>
+                <h4>Items available:</h4>
+                <Carousel infiniteLoop={true} showThumbs={false}>
+                  <div>
+                    <img src={Wings} style={{width: '50%', height: '50%'}}/>
+                  </div>
+                  <div>
+                    <img src={Burger} style={{width: "50%", height: "50%"}}/>
+                  </div>
+                </Carousel>
+              </div>
+            </Modal>
+          </div>
+
+          <div className="modal">
+            <Modal
+              style={{ color: 'White', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "2%", borderColor: "black", borderwidth: 1 }}
+              open={this.state.modalPizza}
+              onClose={this.handleClosePizza}
+            >
+              <div>
+                <h2>Boston Pizza</h2>
+                <h4>Hours of Operation:</h4>
+                <p>Saturday	10a.m.–10p.m.</p>
+                <p>Sunday	10a.m.–10p.m.</p>
+                <p>Monday-Friday	11a.m.–1a.m.</p>
+                <h4>Items available:</h4>
+                <Carousel infiniteLoop={true} showThumbs={false}>
+                  <div>
+                    <img src={Pizza} style={{width: '50%', height: '50%'}}/>
+                  </div>
+                </Carousel>
+              </div>
+            </Modal>
+          </div>
           <Marker
-            onClick={this.handleOpen}
+            onClick={this.handleOpenFortinos}
             title={'Fortinos (Main St.)'}
             name={'Fortinos (Main St.)'}
             position={{ lat: 43.2553, lng: -79.9289 }}
@@ -87,7 +165,7 @@ class MapPage extends Component {
           />
 
             <Marker
-                onClick={this.handleOpen}
+                onClick={this.handleOpenSnooty}
                 title={'Snooty Fox'}
                 name={'Snooty Fox'}
                 position={{ lat: 43.2618, lng: -79.9052 }}
@@ -98,7 +176,7 @@ class MapPage extends Component {
           />
 
             <Marker
-                onClick={this.handleOpen}
+                onClick={this.handleOpenPizza}
                 title={'Boston Pizza'}
                 name={'Boston Pizza'}
                 position={{ lat: 43.2572, lng: -79.9277 }}
