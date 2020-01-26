@@ -2,3 +2,20 @@
     background-color: 'white'; /* Fallback color */
     z-index: 1; /* Overlay effect: positioned over other containers */
 }
+
+.mainContainer {
+    background-image:
+        url(../assets/leftBG.png),
+        url(../assets/rightBG.png);
+    /* Full height */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position:
+        left,
+        right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
