@@ -4,7 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { DropzoneArea } from 'material-ui-dropzone'
 import '../styles/StoreSetInfo.css';
-import '../food_background.png';
 import { configure } from '@testing-library/react';
 import config from 'react-global-configuration';
 
@@ -14,7 +13,9 @@ class StoreSetInfo extends Component {
         this.state = {
             storeName: "",
             storeLocation: "",
-            storeHours: "",
+            storeSunFriHours: "",
+            storeSatFriHours: "",
+            storeMonFriHours: "",
             pictures: []
         }
     }
@@ -31,9 +32,23 @@ class StoreSetInfo extends Component {
         });
     }
 
-    handleStoreHoursChange = (e) => {
+    handleStoreMonFriHoursChange = (e) => {
         this.setState({
-            storeHours: e.target.value
+            storeMonFriHours: e.target.value
+        });
+    }
+
+
+    handleStoreSatHoursChange = (e) => {
+        this.setState({
+            storeSatHours: e.target.value
+        });
+    }
+
+
+    handleStoreSunHoursChange = (e) => {
+        this.setState({
+            storeSunHours: e.target.value
         });
     }
 
@@ -44,7 +59,7 @@ class StoreSetInfo extends Component {
     }
 
     submitTrigger() {
-        config.set({flag: true}, {freeze: false});
+        config.set({ flag: true }, { freeze: false });
         alert("Your submission has been sent!\nThank you for reducing waste in your local community!");
     }
 
@@ -82,8 +97,26 @@ class StoreSetInfo extends Component {
                             <TextField
                                 required
                                 id="filled-required"
-                                label="Store Hours"
-                                onChange={this.handleStoreHoursChange}
+                                label="Saturday Hours"
+                                onChange={this.handleStoreSatHoursChange}
+                            />
+                        </div>
+
+                        <div className="storeHours">
+                            <TextField
+                                required
+                                id="filled-required"
+                                label="Sunday Hours"
+                                onChange={this.handleStoreSunHoursChange}
+                            />
+                        </div>
+
+                        <div className="storeHours">
+                            <TextField
+                                required
+                                id="filled-required"
+                                label="Monday-Friday Hours"
+                                onChange={this.handleStoreMonFriHoursChange}
                             />
                         </div>
 
