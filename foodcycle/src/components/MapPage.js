@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import config from 'react-global-configuration';
 
 import Chicken from '../assets/chicken.jpeg';
 import Muffin from '../assets/muffin.jpg';
@@ -16,6 +17,7 @@ import Wings from '../assets/wings.jpg';
 import Cookie from '../assets/cookie.jpg';  
 
 import GreenIcon from '../assets/Green2.png';
+
 class MapPage extends Component {
   constructor() {
     super();
@@ -34,6 +36,11 @@ class MapPage extends Component {
     this.handleClosePizza = this.handleClosePizza.bind(this);
     this.handleOpenStarbucks = this.handleOpenStarbucks.bind(this);
     this.handleCloseStarbucks = this.handleCloseStarbucks.bind(this);
+  }
+
+  componentDidMount() {
+    const flag = config.get('flag');
+    console.log(flag);
   }
 
   handleOpenFortinos() {

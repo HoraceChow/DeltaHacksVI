@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 import { DropzoneArea } from 'material-ui-dropzone'
 import '../styles/StoreSetInfo.css';
 import '../food_background.png';
+import { configure } from '@testing-library/react';
+import config from 'react-global-configuration';
 
 class StoreSetInfo extends Component {
     constructor() {
@@ -39,6 +41,10 @@ class StoreSetInfo extends Component {
         this.setState({
             pictures: files
         });
+    }
+
+    submitTrigger() {
+        config.set({flag: true}, {freeze: false});
     }
 
     render() {
@@ -85,7 +91,7 @@ class StoreSetInfo extends Component {
                         />
 
                         <div>
-                            <Button className="button" variant="contained">Submit</Button>
+                            <Button className="button" variant="contained" onClick={this.submitTrigger}>Submit</Button>
                         </div>
 
                     </div>

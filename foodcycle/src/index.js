@@ -7,6 +7,9 @@ import Home from './components/Home';
 import StoreSetInfo from './components/StoreSetInfo';
 import MapPage from './components/MapPage';
 import * as serviceWorker from './serviceWorker';
+import config from 'react-global-configuration';
+
+config.set({flag: false}, {freeze: false});
 
 const routing = (
     <Router>
