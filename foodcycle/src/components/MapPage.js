@@ -53,7 +53,7 @@ class MapPage extends Component {
             >
               <div>
                 <h2>Fortinos</h2>
-                <Carousel infiniteLoop={true}>
+                <Carousel infiniteLoop={true} showThumbs={false}>
                   <div>
                     <img src={Chicken} style={{width: '50%', height: '50%'}}/>
                   </div>

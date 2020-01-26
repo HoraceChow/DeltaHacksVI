@@ -22,9 +22,10 @@
 }
 
 .homeButton {
+    margin-left: 49em; /* 49em for full screen */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     width: 100%;
 }
 

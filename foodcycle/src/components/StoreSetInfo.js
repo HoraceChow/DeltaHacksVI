@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import '../styles/StoreSetInfo.css';
@@ -37,7 +38,7 @@ class StoreSetInfo extends Component {
             <div className = "mainContainer">
                 <div className = "upperbody"> 
                     <div className = "home">
-                        <Button className="homeButton" variant="contained">Home</Button>
+                        <Button className="homeButton" variant="contained" component={Link} to="/home">Home</Button>
                     </div>
                     {/* <div className = "map">
                         <Button className = "mapButton" variant="contained">Map</Button>
