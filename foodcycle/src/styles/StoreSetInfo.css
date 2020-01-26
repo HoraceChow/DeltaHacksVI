@@ -46,10 +46,10 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     margin: auto;
-    margin-top: 5%;
+    margin-top: -5%;
     width: 500px;
     border-radius: 20px;
-    padding: 100px 20px 100px 20px;
+    padding: 50px 20px 50px 20px;
     background: #f0efef;
 }
 

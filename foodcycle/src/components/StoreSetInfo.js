@@ -35,9 +35,9 @@ class StoreSetInfo extends Component {
         });
     }
 
-    onDrop(picture) {
+    onDrop = (picture) => {
         this.setState({
-            pictures: this.state.pictures.concat(picture),
+            pictures: picture
         });
     }
 
