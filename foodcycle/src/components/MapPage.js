@@ -25,7 +25,7 @@ class MapPage extends Component {
       modalFortinos: false,
       modalSnooty: false,
       modalPizza: false,
-      locationState: true,
+      locationState: false,
       modalStarbucks: false,
     }
     this.handleOpenFortinos = this.handleOpenFortinos.bind(this);
@@ -41,6 +41,9 @@ class MapPage extends Component {
   componentDidMount() {
     const flag = config.get('flag');
     console.log(flag);
+    this.setState({
+        locationState: flag
+    })
   }
 
   handleOpenFortinos() {
