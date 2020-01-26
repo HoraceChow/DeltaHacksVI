@@ -45,6 +45,7 @@ class StoreSetInfo extends Component {
 
     submitTrigger() {
         config.set({flag: true}, {freeze: false});
+        alert("Your submission has been sent!\nThank you for reducing waste in your local community!");
     }
 
     render() {
