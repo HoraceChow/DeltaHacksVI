@@ -34,17 +34,20 @@ class StoreSetInfo extends Component {
 
     render() {
         return (
-            <div>
+            <div className = "mainContainer">
                 <div className = "upperbody"> 
                     <div className = "home">
-                        <Button className = "homeButton" variant="contained">Home</Button>
+                        <Button className="homeButton" variant="contained">Home</Button>
                     </div>
-                    <div className = "map">
+                    {/* <div className = "map">
                         <Button className = "mapButton" variant="contained">Map</Button>
-                    </div>  
+                    </div>   */}
                 </div>
                 <div className = "body">
-
+                    <div>
+                        <p style={{fontWeight: "bold", fontSize: "20px"}}>Join Our Network</p>
+                        <p style={{marginTop: "-10px", fontWeight: "bold"}}>Thank you making a change in your local community!</p>
+                    </div>
                     <div className="storeSetInfo">
                         <TextField
                             required
