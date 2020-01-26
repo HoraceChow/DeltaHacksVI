@@ -3,10 +3,10 @@
 	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
 	background-color:#ffffff;
 	border-radius:42px !important;
-	border:1px solid #52de98 !important;
+	border:1px solid #00733b !important;
 	display:inline-block;
 	cursor:pointer;
-	color:#52de98 !important;
+	color:#00733b !important;
 	font-family:Trebuchet MS;
 	font-size:16px;
 	padding:12px 25px;
@@ -14,6 +14,25 @@
     text-shadow:0px 1px 0px #ffffff;
     margin: 20px !important;
 }
+
+.mainContainer {
+    background-image:
+        url(../assets/leftBG.png),
+        url(../assets/rightBG.png);
+    /* Full height */
+    height: 98vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position:
+        left,
+        right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .button:hover {
 	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
 	background-color:#ffffff;
@@ -27,22 +46,32 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     margin: auto;
-    margin-top: 10%;
-    width: 70%;
+    margin-top: 5%;
+    width: 500px;
     border-radius: 20px;
     padding: 100px 20px 100px 20px;
     background: #f0efef;
 }
 
 .upperbody{
-    background-color: #655c56;
-    padding: 10px;
+    /* background-color: #655c56; */
+    padding: 15px;
+    border-radius: 10px;
+    
 }
 
 .home{
-    display: inline !important;
-    margin: 10px;
+    display: inline;
+    margin: 5px;
 }
 .map{
     display: inline !important;
+    margin: 5px;
+}
+
+.homeButton{
+    width: 5px;
+    border-color: #00733b !important;
+    color: #00733b !important; 
+    background-color: #ffffff !important;
 }

@@ -4,6 +4,9 @@ import Modal from '@material-ui/core/Modal';
 import '../styles/Map.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import Chicken from '../assets/chicken.jpeg';
+import Muffin from '../assets/muffin.jpg';
+import Yogurt from '../assets/yogurt.jpg';
 
 class MapPage extends Component {
   constructor() {
@@ -44,15 +47,21 @@ class MapPage extends Component {
 
           <div className="modal">
             <Modal
-              style={{ color: 'white', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%", borderColor: "black", borderwidth: 1 }}
+              style={{ color: 'White', width: "50%", height: "50%", borderRadius: 20, marginLeft: "25%", marginTop: "10%", borderColor: "black", borderwidth: 1 }}
               open={this.state.modal}
               onClose={this.handleClose}
             >
               <div>
-                <h2>Text in a modal</h2>
-                <Carousel>
+                <h2>Fortinos</h2>
+                <Carousel infiniteLoop={true} showThumbs={false}>
                   <div>
-                    <img src="https://www.thestar.com/content/dam/thestar/life/food_wine/2010/03/26/we_rate_the_best_supermarket_rotisserie_chicken/chicken.jpeg" width="5em" height="5em"/>
+                    <img src={Chicken} style={{width: '50%', height: '50%'}}/>
+                  </div>
+                  <div>
+                    <img src={Muffin} style={{width: "50%", height: "50%"}}/>
+                  </div>
+                  <div>
+                    <img src={Yogurt} style={{width: "50%", height: "50%"}}/>
                   </div>
                 </Carousel>
               </div>
