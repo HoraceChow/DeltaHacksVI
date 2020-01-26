@@ -49,9 +49,6 @@ class StoreSetInfo extends Component {
                     <div className="home">
                         <Button className="homeButton" variant="contained" component={Link} to="/home">Home</Button>
                     </div>
-                    {/* <div className = "map">
-                        <Button className = "mapButton" variant="contained">Map</Button>
-                    </div>   */}
                 </div>
                 <div className="body">
                     <div>
@@ -86,6 +83,7 @@ class StoreSetInfo extends Component {
                     </div>
 
                     <ImageUploader
+                        className = "imageuploader"
                         withIcon={true}
                         buttonText='Choose images'
                         onChange={this.onDrop}
