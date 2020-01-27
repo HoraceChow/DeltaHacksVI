@@ -278,7 +278,8 @@ class MapPage extends Component {
     );
   }
 }
+let key = "";
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCiX5Kn' + '' + 'W9YIg1Ot17lgBwKfx' + '' + 'MELLU7mNbM')
+  apiKey: (key)
 })(MapPage)
