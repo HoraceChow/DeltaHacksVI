@@ -278,7 +278,7 @@ class MapPage extends Component {
     );
   }
 }
-let key = "";
+let key = "INSERT GOOGLE MAPS API KEY HERE";
 
 export default GoogleApiWrapper({
   apiKey: (key)
